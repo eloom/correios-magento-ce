@@ -2,8 +2,7 @@
 
 ##eloom.licenca##
 
-class Eloom_Correios_Sro_Destino
-{
+class Eloom_Correios_Sro_Destino {
 
 	private $local;
 	private $codigo;
@@ -11,58 +10,47 @@ class Eloom_Correios_Sro_Destino
 	private $bairro;
 	private $uf;
 
-	public function getLocal()
-	{
+	public function getLocal() {
 		return $this->local;
 	}
 
-	public function getCodigo()
-	{
+	public function getCodigo() {
 		return $this->codigo;
 	}
 
-	public function getCidade()
-	{
+	public function getCidade() {
 		return $this->cidade;
 	}
 
-	public function getBairro()
-	{
+	public function getBairro() {
 		return $this->bairro;
 	}
 
-	public function getUf()
-	{
+	public function getUf() {
 		return $this->uf;
 	}
 
-	public function setLocal($local)
-	{
+	public function setLocal($local) {
 		$this->local = $local;
 	}
 
-	public function setCodigo($codigo)
-	{
+	public function setCodigo($codigo) {
 		$this->codigo = $codigo;
 	}
 
-	public function setCidade($cidade)
-	{
+	public function setCidade($cidade) {
 		$this->cidade = $cidade;
 	}
 
-	public function setBairro($bairro)
-	{
+	public function setBairro($bairro) {
 		$this->bairro = $bairro;
 	}
 
-	public function setUf($uf)
-	{
+	public function setUf($uf) {
 		$this->uf = $uf;
 	}
 
-	public function parse($destino)
-	{
+	public function parse($destino) {
 		$this->local = (string)$destino->local;
 		$this->codigo = (string)$destino->codigo;
 		$this->cidade = (string)$destino->cidade;
