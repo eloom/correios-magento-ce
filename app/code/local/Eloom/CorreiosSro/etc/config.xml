@@ -7,13 +7,6 @@
 	</modules>
 
 	<frontend>
-		<layout>
-			<updates>
-				<eloom_correiossro>
-					<file>eloom/correios/sro.xml</file>
-				</eloom_correiossro>
-			</updates>
-		</layout>
 		<translate>
 			<modules>
 				<eloom_correiossro>

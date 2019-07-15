@@ -6,8 +6,8 @@
             <codePool>local</codePool>
             <version>##eloom.versao##</version>
             <depends>
-				<Eloom_Bootstrap />
-			</depends>
+							<Eloom_Bootstrap />
+						</depends>
         </Eloom_Correios>
     </modules>
 </config>
