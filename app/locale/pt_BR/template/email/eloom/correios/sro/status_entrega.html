@@ -1,0 +1,89 @@
+<!--@subject {{var store.getFrontendName()}}: Pedido # {{var order.increment_id}} {{var status}} @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"var logo_alt":"Email Logo Image Alt",
+"htmlescape var=$billing.getName()":"Guest Customer Name",
+"var order.increment_id":"Order Id",
+"var order.getStatusLabel()":"Order Status",
+"var comment":"Order Comment",
+"var store.getFrontendName()":"Store Name"}
+@-->
+<!--@styles
+@-->
+
+<body style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+    <div style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+        <table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+            <tr>
+                <td align="center" valign="top" style="padding:20px 0 20px 0">
+                    <table bgcolor="FFFFFF" cellspacing="0" cellpadding="10" border="0" width="650" style="border:1px solid #E0E0E0;">
+                        <tr>
+                            <td valign="top">
+                                <a href="{{store url=""}}"><img src="{{var logo_url}}" alt="{{var logo_alt}}" style="margin-bottom:10px;" border="0"/></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <h1 style="font-size:22px; font-weight:normal; line-height:22px; margin:0 0 11px 0;">Ol&aacute; {{htmlescape var=$billing.getName()}}</h1>
+                                <br>
+                                <p style="font-size:12px; line-height:16px; margin:0;">
+                                    O objeto <span style="font-weight:700;">{{var numero}}</span> foi atualizado para <span style="font-weight:700;">{{var status}}</span>.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" width="100%" bgcolor="#EAEAEA" style="font-size:13px; padding:5px 9px 6px 9px; line-height:1em;">Informa&ccedil;&otilde;es do objeto</th>
+                                            <th width="10"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td valign="top" width="100%">
+                                                <table cellspacing="0" cellpadding="0" class="message-container" width="100%">
+                                                    <tbody>
+                                                        <tr><td valign="top" style="font-size:12px; padding:7px 9px 9px 9px; border-left:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; border-right:1px solid #EAEAEA;" width="40%">
+                                                                {{var data}}<br> 
+                                                                {{var hora}}<br>
+                                                                <label style="text-transform:capitalize;">{{var cidade}}&nbsp;/&nbsp;{{var estado}}</label>
+                                                            </td>
+                                                            <td valign="top" style="font-size:12px; padding:7px 9px 9px 9px; border-left:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; border-right:1px solid #EAEAEA;" width="60%">        
+                                                                <span style="font-weight:700;">{{var status}}</span>
+                                                                {{if destino}}
+                                                                <br>{{var destino}}
+                                                                {{/if}}
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p style="font-size:12px; line-height:16px; margin:20px 0;">Voc&ecirc; pode verificar o andamento do seu pedido clicando em <a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">acessar sua conta</a>.</p>
+
+                                                <p style="font-size:12px; line-height:16px; margin:20px 0;">
+                                                    Se voc&ecirc; tiver alguma d&uacute;vida sobre sua conta ou qualquer outra informa&ccedil;&atilde;o do site, n&atilde;o deixe de entrar em contato atrav&eacute;s do email <a href="mailto:{{var store_email}}">{{var store_email}}</a>
+                                                    {{depend store_phone}} ou por telefone <a href="tel:{{var phone}}">{{var store_phone}}</a>{{/depend}}.
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>            
+                        <tr>
+                            <td bgcolor="#EAEAEA" align="center" style="background:#EAEAEA; text-align:center;">
+                                <center><p style="font-size:12px; margin:0;">Obrigado, <strong>{{var store.getFrontendName()}}</strong></p></center>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
