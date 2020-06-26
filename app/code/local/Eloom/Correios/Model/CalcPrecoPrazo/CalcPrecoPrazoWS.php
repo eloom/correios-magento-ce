@@ -4,8 +4,9 @@
 
 class Eloom_Correios_Model_CalcPrecoPrazo_CalcPrecoPrazoWS extends \SoapClient {
 
-	const TIMEOUT = 10;
-  /**
+	const TIMEOUT = 30;
+
+	/**
    * @var array $classmap The defined classes
    * @access private
    */
