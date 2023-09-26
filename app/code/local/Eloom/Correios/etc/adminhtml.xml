@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config>
+	<menu>
+		<sales>
+			<children>
+				<eloom_correios translate="title" module="eloom_correios">
+					<title>Correios</title>
+					<sort_order>75</sort_order>
+				</eloom_correios>
+			</children>
+		</sales>
+		<eloom>
+			<children>
+				<carriers>
+					<title>Frete</title>
+					<sort_order>5</sort_order>
+					<children>
+						<eloom_correios translate="title" module="eloom_correios">
+							<title>Correios</title>
+							<sort_order>1</sort_order>
+							<action>adminhtml/system_config/edit/section/carriers</action>
+						</eloom_correios>
+					</children>
+				</carriers>
+			</children>
+		</eloom>
+	</menu>
+
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<eloom>
+						<children>
+							<carriers>
+								<title>Frete</title>
+								<sort_order>5</sort_order>
+								<children>
+									<eloom_correios translate="title" module="eloom_correios">
+										<title>Correios</title>
+										<sort_order>1</sort_order>
+									</eloom_correios>
+								</children>
+							</carriers>
+						</children>
+					</eloom>
+
+					<system>
+						<children>
+							<carriers>
+								<children>
+									<eloom_correios translate="title" module="eloom_correios">
+										<title>Correios</title>
+									</eloom_correios>
+								</children>
+							</carriers>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

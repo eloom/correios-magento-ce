@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <sections>
+    <carriers>
+      <groups>
+        <eloom_correios translate="label">
+          <label>Correios - élOOm</label>
+          <sort_order>1</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <active translate="label">
+              <label>Enabled</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </active>
+            <title translate="label">
+              <label><![CDATA[Título]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <validate>required-entry</validate>
+              <depends><active>1</active></depends>
+            </title>
+            <conv translate="label">
+              <label><![CDATA[<strong>CONVÊNIO</strong>]]></label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends><active>1</active></depends>
+            </conv>
+            <usuario>
+              <label><![CDATA[Usuário]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>11</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <comment><![CDATA[Usuário do conveniado junto à ECT.]]></comment>
+              <depends><active>1</active></depends>
+            </usuario>
+            <codigo_acesso>
+              <label><![CDATA[Código de Acesso]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>12</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <comment><![CDATA[Código de Acesso do conveniado junto à ECT.]]></comment>
+              <depends><active>1</active></depends>
+            </codigo_acesso>
+            <cartao_postagem>
+              <label><![CDATA[Cartão de Postagem]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>13</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <comment><![CDATA[Cartão de Postagem do conveniado junto à ECT.]]></comment>
+              <depends><active>1</active></depends>
+            </cartao_postagem>
+            <servicos translate="label">
+              <label><![CDATA[<strong>SERVIÇOS</strong>]]></label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </servicos>
+            <cd_servico>
+              <label><![CDATA[Serviços]]></label>
+              <frontend_type>multiselect</frontend_type>
+              <sort_order>21</sort_order>
+              <source_model>Eloom_Correios_Model_System_Config_Source_Servicos</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <validate>required-entry</validate>
+              <comment><![CDATA[Serviços "Com Contrato" apenas para conveniado junto à ECT.]]></comment>
+            </cd_servico>
+            <servico_gratuito translate="label">
+              <label><![CDATA[Serviço com Entrega Gratuita]]></label>
+              <frontend_type>select</frontend_type>
+              <frontend_class>free-method</frontend_class>
+              <source_model>Eloom_Correios_Model_System_Config_Source_Servicos</source_model>
+              <sort_order>22</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <comment><![CDATA[Este serviço funciona apenas quando têm Frete Grátis nas Regras de Promoção do Magento.]]></comment>
+            </servico_gratuito>
+            <servico_gratuito_desconto translate="label">
+              <label><![CDATA[Valor máximo p/ Frete Grátis]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>23</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <comment><![CDATA[O Frete Grátis será apresentado somente se o valor for MENOR ou IGUAL ao valor informado aqui.<br/> Ex: 4.75.]]></comment>
+            </servico_gratuito_desconto>
+            <dimensoes translate="label">
+              <label><![CDATA[<strong>MEDIDAS</strong>]]></label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </dimensoes>
+            <altura_padrao translate="label">
+              <label><![CDATA[Altura Padrão (cm)]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>31</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <validate>required-entry validate-digits</validate>
+              <comment><![CDATA[Na ausência de "Altura" no produto, assumirá o valor 2 cm.]]></comment>
+            </altura_padrao>
+            <largura_padrao translate="label">
+              <label><![CDATA[Largura Padrão (cm)]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>32</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <validate>required-entry validate-digits</validate>
+              <comment><![CDATA[Na ausência de "Largura" no produto, assumirá o valor 11 cm.]]></comment>
+            </largura_padrao>
+            <comprimento_padrao translate="label">
+              <label><![CDATA[Comprimento Padrão (cm)]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>33</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <validate>required-entry validate-digits</validate>
+              <comment><![CDATA[Na ausência de "Comprimento" no produto, assumirá o valor 16 cm.]]></comment>
+            </comprimento_padrao>
+            <tp_vl_peso>
+              <label><![CDATA[Peso da Encomenda]]></label>
+              <frontend_type>select</frontend_type>
+              <sort_order>34</sort_order>
+              <source_model>Eloom_Correios_Model_System_Config_Source_PesoEncomenda</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </tp_vl_peso>
+
+            <prazos translate="label">
+              <label><![CDATA[<strong>PRAZOS</strong>]]></label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>40</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </prazos>
+            <prazo_entrega translate="label">
+              <label><![CDATA[Exibir prazo de entrega]]></label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>41</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </prazo_entrega>
+            <mensagem_prazo_entrega translate="label">
+              <label><![CDATA[Mensagem exibida no prazo de entrega]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>42</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <comment><![CDATA["%s" para o nome do serviço. "%d" para o número de dias.]]></comment>
+              <depends>
+                <prazo_entrega>1</prazo_entrega>
+              </depends>
+            </mensagem_prazo_entrega>
+            <prazo_extra>
+              <label><![CDATA[Prazo Extra]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>43</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <validate>required-entry validate-digits</validate>
+              <comment><![CDATA[Prazo somado ao prazo dos Correios, em dias.]]></comment>
+            </prazo_extra>
+
+            <taxas translate="label">
+              <label><![CDATA[<strong>TAXAS</strong>]]></label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>50</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </taxas>
+            <taxa_extra>
+              <label><![CDATA[Usar Taxa Extra]]></label>
+              <frontend_type>select</frontend_type>
+              <source_model>Eloom_Correios_Model_System_Config_Source_TaxaExtra</source_model>
+              <sort_order>51</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </taxa_extra>
+            <taxa_extra_valor>
+              <label><![CDATA[Valor/Percentual da Taxa Extra]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>52</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <depends><taxa_extra>1</taxa_extra></depends>
+              <comment><![CDATA[Use o formato americano para valores. Ex.: 15.00, 32.35]]></comment>
+            </taxa_extra_valor>
+
+            <outros translate="label">
+              <label><![CDATA[<strong>OUTROS</strong>]]></label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>900</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </outros>
+            <cd_formato>
+              <label><![CDATA[Formato da Encomenda]]></label>
+              <frontend_type>select</frontend_type>
+              <sort_order>901</sort_order>
+              <source_model>Eloom_Correios_Model_System_Config_Source_FormatoEmbalagem</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </cd_formato>
+            <!--
+            <vl_valor_declarado translate="label">
+              <label><![CDATA[Serviço de Valor Declarado]]></label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>902</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </vl_valor_declarado>
+            -->
+            <writelog translate="label">
+              <label><![CDATA[Gravar resposta dos Correios em log]]></label>
+              <frontend_type>select</frontend_type>
+              <sort_order>905</sort_order>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <comment><![CDATA[Arquivo está em {{base_dir}}/var/log/eloom-plataforma-yyyy-mm-dd.log]]>
+              </comment>
+            </writelog>
+            <showmethod translate="label">
+              <label><![CDATA[Mostrar método mesmo se não aplicável]]></label>
+              <frontend_type>select</frontend_type>
+              <sort_order>906</sort_order>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <comment><![CDATA[Se houver um erro ou o método não for aplicável naquela situação, mesmo assim
+                                mostrar as mensagens de erro?]]>
+              </comment>
+            </showmethod>
+            <sort_order>
+              <label><![CDATA[Sort Order]]></label>
+              <frontend_type>text</frontend_type>
+              <sort_order>999</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <validate>required-entry validate-digits</validate>
+              <comment><![CDATA[Orderm de apresentação do Método de Frete.]]></comment>
+            </sort_order>
+          </fields>
+        </eloom_correios>
+      </groups>
+    </carriers>
+  </sections>
+</config>

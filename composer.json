@@ -1,0 +1,17 @@
+{
+    "name": "eloom/correios",
+    "description": "Magento 1 module to connect to Correios",
+    "type": "magento-module",
+    "homepage": "https://bitbucket.org/rodrigosanders/correios/src/master/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "elOOm",
+            "email": "suporte@eloom.com.br"
+        }
+    ],
+    "require": {
+        "php": "~7.3",
+        "eloom/sdk-correios-php": "~1.0"
+    }
+}
