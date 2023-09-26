@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<layout version="0.1.0">
-    <default>
-        <reference name="js">
-            <block type="eloom_correiossro/adminhtml_sonda" template="eloom/correios/sro/sonda/actions.phtml" />
-        </reference>
-    </default>
-</layout>

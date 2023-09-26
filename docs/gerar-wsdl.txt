@@ -1,1 +1,0 @@
-php wsdl2phpgenerator-2.5.5.phar -i http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl -o /tmp/correios/wsdl
